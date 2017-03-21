@@ -27,22 +27,33 @@ public class nulogyexercise {
 	}
 	public static void main(String[] args){
 		//Need to deal with commandline input to put into function
-		// System.out.println(args[0]);
-		// String basePrice = args[0];
-		// String numPeople = args[1];
-		// String jobType = args[3];
+		//Input: PRICE INT STRING
 
-		// System.out.println(basePrice);
-		// System.out.println(numPeople);
-		// System.out.println(jobType);
+		String basePriceString = args[0];
+		String numPeopleString = args[1];
+		String jobType = args[2];
 
-		System.out.println("Commandline arguments:");
-		for (String arg : args) {
-			System.out.println(arg);
-		}
+		double basePrice = Double.parseDouble(basePriceString);
+		int numPeople = Integer.parseInt(numPeopleString);
 
-		// double toPrint = calculateMarkUp(1299.99, 3, "food");
-		// double rounded = Math.round(toPrint * 100.0) / 100.0;
-		// System.out.println(rounded);
+		System.out.println(basePrice);
+		System.out.println(numPeople);
+		System.out.println(jobType);
+
+		double test = 1299.99;
+		int test2 = 3;
+		String test3 = "food";
+
+		double result = calculateMarkUp(test,test2,test3);	
+		double roundedResult = Math.round(result * 100.0)/100.0;
+
+		System.out.println("Hardcoded result:");
+		System.out.println(roundedResult);
+
+		double result2 = calculateMarkUp(basePrice, numPeople, jobType);
+		double roundedresult2 = Math.round(result2 * 100.0)/ 100.0;
+
+		System.out.println("Commandline result:");
+		System.out.println(roundedresult2);
 	}
 }
