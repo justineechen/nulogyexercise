@@ -27,9 +27,22 @@ public class nulogyexercise {
 	}
 	public static void main(String[] args){
 		//Need to deal with commandline input to put into function
-	// System.out.println(args[0]);
-		double toPrint = calculateMarkUp(1299.99, 3, "food");
-		double rounded = Math.round(toPrint * 100.0) / 100.0;
-		System.out.println(rounded);
+		// System.out.println(args[0]);
+		// String basePrice = args[0];
+		// String numPeople = args[1];
+		// String jobType = args[3];
+
+		// System.out.println(basePrice);
+		// System.out.println(numPeople);
+		// System.out.println(jobType);
+
+		System.out.println("Commandline arguments:");
+		for (String arg : args) {
+			System.out.println(arg);
+		}
+
+		// double toPrint = calculateMarkUp(1299.99, 3, "food");
+		// double rounded = Math.round(toPrint * 100.0) / 100.0;
+		// System.out.println(rounded);
 	}
 }
