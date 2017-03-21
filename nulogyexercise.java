@@ -1,3 +1,4 @@
+import java.lang.Math;
 
 public class nulogyexercise {
 	/**
@@ -16,20 +17,19 @@ public class nulogyexercise {
 	 	else if(jobType == "electronics"){
 	 		material += 0.02;
 	 	}
-	 	double markUp = 0.05 
-	 				   + (0.012 * numPeople)
+	 	double markUp = (0.012 * numPeople)
 	 				   + material 
 	 				   + 1.0;
-	 	return markUp * basePrice;
+	 	basePrice += basePrice * 0.05;
+	 	return basePrice * markUp;
+
 
 	}
 	public static void main(String[] args){
 		//Need to deal with commandline input to put into function
 	// System.out.println(args[0]);
 		double toPrint = calculateMarkUp(1299.99, 3, "food");
-		System.out.println(toPrint);
+		double rounded = Math.round(toPrint * 100.0) / 100.0;
+		System.out.println(rounded);
+	}
 }
-}
-
-
-
